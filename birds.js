@@ -31,3 +31,9 @@ function airSpeedVelocity(bird) {
             return null
     }
 }
+
+class Bird {
+
+}
+
+module.exports = { plumages, speeds }
