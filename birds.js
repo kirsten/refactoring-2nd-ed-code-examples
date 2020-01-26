@@ -37,16 +37,7 @@ class Bird {
     }
 
     get airSpeedVelocity() {
-        switch (this.type) {
-            case 'EuropeanSwallow':
-                return 35;
-            case 'AfricanSwallow':
-                return 40 - 2 * this.numberOfCoconuts;
-            case 'NorwegianBlueParrot':
-                return (this.isNailed) ? 0 : 10 + this.voltage / 10;
-            default:
-                return null
-        }
+        return null
     }
 }
 
@@ -54,11 +45,19 @@ class EuropeanSwallow extends Bird {
     get plumage() {
         return "average";
     }
+
+    get airSpeedVelocity() {
+        return 35;
+    }
 }
 
 class AfricanSwallow extends Bird {
     get plumage() {
         return (this.numberOfCoconuts > 2) ? 'tired' : 'average'
+    }
+
+    get airSpeedVelocity() {
+        return 40 - 2 * this.numberOfCoconuts;
     }
 }
 class NorwegianBlueParrot extends Bird {
@@ -66,6 +65,9 @@ class NorwegianBlueParrot extends Bird {
         return (this.voltage > 100) ? 'scorched' : 'beautiful'
     }
 
+    get airSpeedVelocity() {
+        return (this.isNailed) ? 0 : 10 + this.voltage / 10;
+    }
 }
 
 module.exports = { plumages, speeds }
