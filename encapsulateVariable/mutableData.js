@@ -1,6 +1,6 @@
-import { getDefaultOwner, updateDefaultOwner } from './defaultOwner';
+import { defaultOwner, updateDefaultOwner } from './defaultOwner';
 
-spaceship.owner = getDefaultOwner();
+spaceship.owner = defaultOwner();
 
 updateDefaultOwner({ firstName: "Kelsey", lastName: "Nordine" });
 
