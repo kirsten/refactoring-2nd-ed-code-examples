@@ -3,7 +3,7 @@ let defaultOwner = { firstName: "Kirsten", lastName: "Nordine" };
 function getDefaultOwner() { return defaultOwner; }
 function updateDefaultOwner(ownerData) { defaultOwner = ownerData; }
 
-spaceship.owner = defaultOwner;
+spaceship.owner = getDefaultOwner();
 
-defaultOwner = { firstName: "Kelsey", lastName: "Nordine" };
+defaultOwner = updateDefaultOwner({ firstName: "Kelsey", lastName: "Nordine" });
 
