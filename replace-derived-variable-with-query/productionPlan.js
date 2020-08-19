@@ -1,7 +1,6 @@
 class ProductionPlan {
   constructor() {
     this._adjustments = [];
-    this._production = 0;
   }
 
   get production() {
@@ -10,6 +9,5 @@ class ProductionPlan {
 
   applyAdjustment(someAdjustment) {
     this._adjustments.push(someAdjustment);
-    this._production += someAdjustment.amount;
   }
 }
