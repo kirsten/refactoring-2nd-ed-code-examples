@@ -1,9 +1,6 @@
-let defaultOwner = { firstName: "Kirsten", lastName: "Nordine" };
-
-function getDefaultOwner() { return defaultOwner; }
-function updateDefaultOwner(ownerData) { defaultOwner = ownerData; }
+import { getDefaultOwner, updateDefaultOwner } from './defaultOwner';
 
 spaceship.owner = getDefaultOwner();
 
-defaultOwner = updateDefaultOwner({ firstName: "Kelsey", lastName: "Nordine" });
+updateDefaultOwner({ firstName: "Kelsey", lastName: "Nordine" });
 
