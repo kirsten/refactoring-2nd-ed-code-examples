@@ -5,10 +5,6 @@ class ProductionPlan {
   }
 
   get production() {
-    return this.calculatedProduction;
-  }
-
-  get calculatedProduction() {
     return this._adjustments.reduce((sum, adjustment) => sum + adjustment.amount, 0);
   }
 
